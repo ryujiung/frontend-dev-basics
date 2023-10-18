@@ -36,6 +36,9 @@ var o = new Object();
 var a = new Array();
 var d = new Date();
 
+i = 10;
+i - new Number(10);
+
 console.log(i2 + ":" + typeof(i2) + ":" + (i2 instanceof(Number)));
 console.log(s2 + ":" + typeof(s2)+ ":" + (s2 instanceof(String)));
 console.log(b2 + ":" + typeof(b2)+ ":" + (b2 instanceof(Boolean)));
@@ -44,7 +47,20 @@ console.log(a + ":" + typeof(a)+ ":" + (a instanceof(Array)));
 console.log(d + ":" + typeof(d)+ ":" + (d instanceof(Date)));
 
 console.log("==== 객체타입(function) ====");
+function f1(a,b){
+    return a+b;
+}
 
+var f2 = function(a,b){
+    return a + b;
+}
+
+var f3 = new Function('a', 'b', 'return a + b;');
+
+
+console.log(f1(10,20) + ":" + typeof(f1) + ":" + (f1 instanceof(Function)));
+console.log(f2(10,20) + ":" + typeof(f2) + ":" + (f2 instanceof(Function)));
+console.log(f3(10,20) + ":" + typeof(f3) + ":" + (f3 instanceof(Function)));
 
 // 유사 객체
 console.log("==== 원시 타입도 메소드를 호출할 수 있다.(유사객체) ====");
