@@ -10,4 +10,6 @@
 **/.settings
 **/.classpath
 **/.project
-S
+
+## 
+**/node_modules
